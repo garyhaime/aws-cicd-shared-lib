@@ -19,6 +19,5 @@
 def call(Map config) {
     def TransitGatewayId = "TransitGatewayId=${config.TransitGatewayId}"
     cfnUpdate(stack: "${config.stackName}", file: "${config.cf}",
-            params: [TransitGatewayId]
             , timeoutInMinutes: 30, pollInterval: 1000)
 }

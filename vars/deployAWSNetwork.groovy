@@ -17,7 +17,6 @@
 * under the License.
 */
 def call(Map config) {
-    def TransitGatewayId = "TransitGatewayId=${config.TransitGatewayId}"
-    cfnUpdate(stack: "${config.stackName}", file: "${config.cf}",
+    cfnUpdate(stack: "${config.stackName}", file: "${config.cf}"
             , timeoutInMinutes: 30, pollInterval: 1000)
 }
